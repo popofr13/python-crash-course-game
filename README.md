@@ -14,5 +14,5 @@ uv add pygame
 
 Run script
 ```bash
-uv run alien_invasion.py
+uv run main.py
 ```

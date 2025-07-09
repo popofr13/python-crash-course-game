@@ -1,6 +1,11 @@
-import pygame
+# region Circular imports fix
+from __future__ import annotations
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from alien_invasion import AlienInvasion
+# endregion
 
-from alien_invasion import AlienInvasion
+import pygame
 
 class Ship:
     """A class to manage the ship"""
