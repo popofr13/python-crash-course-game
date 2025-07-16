@@ -1,5 +1,5 @@
 [project]
-name = "pcc-game-tutorial"
+name = "xcom"
 version = "0.1.0"
 description = "Python crach course - Game project"
 readme = "README.md"
@@ -7,3 +7,29 @@ requires-python = ">=3.13"
 dependencies = [
     "pygame>=2.6.1",
 ]
+
+[project.scripts]
+xcom = "xcom:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.16.1",
+    "ruff>=0.12.2",
+]
+
+[tool.mypy]
+strict = true
+
+[tool.ruff]
+# Set the maximum line length to 79.
+line-length = 79
+
+[tool.ruff.lint]
+# Add the `line-too-long` rule to the enforced rule set. By default, Ruff omits rules that
+# overlap with the use of a formatter, like Black, but we can override this behavior by
+# explicitly adding the rule.
+extend-select = ["E501"]
